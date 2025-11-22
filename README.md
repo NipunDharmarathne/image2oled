@@ -3,16 +3,16 @@
 A web-based tool to convert images into C `PROGMEM` arrays for OLED displays.  
 Supports multiple dithering methods (Threshold, Floyd–Steinberg, Atkinson, Bayer, JJN, Stucki) and various OLED resolutions.
 
-Try it online: [Insert link here]
+Try it online: https://nipundharmarathne.github.io/image2oled/
 
 If you find this tool helpful, consider supporting its development:
 
 <p>
-  <a href="https://github.com/sponsors/YOUR_USERNAME" target="_blank">
+  <a href="https://github.com/sponsors/NipunDharmarathne" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Sponsor-181717?logo=github&style=for-the-badge" alt="GitHub Sponsors" width="150" style="vertical-align:middle;" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank">
+  <a href="https://buymeacoffee.com/nipundharmarathne" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" width="150" style="vertical-align:middle;" />
   </a>
 </p>
@@ -30,7 +30,7 @@ If you find this tool helpful, consider supporting its development:
 
 ## Usage
 
-1. Open the online tool in your browser: [Insert link here].
+1. Open the online tool in your browser: https://nipundharmarathne.github.io/image2oled/
 2. Upload an image.
 3. Choose the desired OLED resolution.
 4. Select a dithering method to preview.
