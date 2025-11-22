@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>image2oled</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <h1>image2oled</h1>
+
+    <!-- Intro Section -->
+    <p class="intro">
+      Welcome to <strong>image2oled</strong>! This tool allows you to convert images into monochrome arrays suitable for OLED displays, using various dithering methods.
+    </p>
+
+
+    <div class="controls">
+      <label for="fileInput">Choose Image</label>
+      <input type="file" id="fileInput" accept="image/*">
+      
+      <select id="resolutionSelect">
+        <option value="128x64" selected>128×64</option>
+        <option value="128x32">128×32</option>
+        <option value="96x64">96×64</option>
+        <option value="64x48">64×48</option>
+        <option value="64x32">64×32</option>
+        <option value="32x32">32×32</option>
+        <option value="128x128">128×128</option>
+        <option value="256x64">256×64</option>
+      </select>
+    </div>
+
+    <!-- Support Section -->
+    <div class="support">
+      <h2>Enjoying image2oled?</h2>
+      <p>If you find this tool helpful, please consider supporting its development. Your support helps keep it free and improving!</p>
+      
+      <!-- GitHub Sponsor Button -->
+      <a class="github-button" href="https://github.com/sponsors/NipunDharmarathne" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Sponsor @YOUR_USERNAME on GitHub">Sponsor</a>
+      
+      <!-- Buy Me a Coffee Button -->
+      <a href="https://buymeacoffee.com/nipundharmarathne" target="_blank">
+        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 51px !important;width: 217px !important;">
+      </a>
+    </div>
+
+    <!-- More Info Section -->
+    <div class="info">
+      <p>For more information or to report any issues, please visit the <a href="https://github.com/NipunDharmarathne/image2oled" target="_blank">GitHub repository</a>.</p>
+    </div>
+
+    <div class="preview-container" id="previews">
+      <div class="preview-box"><strong>Original</strong><canvas id="originalCanvas"></canvas></div>
+      <div class="preview-box"><strong>Threshold</strong><canvas id="canvasThreshold"></canvas></div>
+      <div class="preview-box"><strong>Floyd–Steinberg</strong><canvas id="canvasFS"></canvas></div>
+      <div class="preview-box"><strong>Atkinson</strong><canvas id="canvasAtkinson"></canvas></div>
+      <div class="preview-box"><strong>Bayer 4×4</strong><canvas id="canvasBayer"></canvas></div>
+      <div class="preview-box"><strong>JJN</strong><canvas id="canvasJJN"></canvas></div>
+      <div class="preview-box"><strong>Stucki</strong><canvas id="canvasStucki"></canvas></div>
+    </div>
+
+    <div class="controls">
+      <select id="canvasSelect">
+        <option value="canvasThreshold">Threshold</option>
+        <option value="canvasFS">Floyd–Steinberg</option>
+        <option value="canvasAtkinson">Atkinson</option>
+        <option value="canvasBayer">Bayer 4×4</option>
+        <option value="canvasJJN">JJN</option>
+        <option value="canvasStucki">Stucki</option>
+      </select>
+      <button id="convert">Generate C PROGMEM Array</button>
+    </div>
+
+    <textarea id="output" placeholder="C PROGMEM array will appear here"></textarea>
+    <button id="copyBtn">Copy Output</button>
+
+    <!-- JS Modules -->
+    <script src="js/canvasSetup.js"></script>
+    <script src="js/dithering.js"></script>
+    <script src="js/imageUpload.js"></script>
+    <script src="js/progmem.js"></script>
+
+    <!-- GitHub Buttons Script -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
